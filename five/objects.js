@@ -1,22 +1,25 @@
-var chevy = {
-	make: "Chevy",
-	model: "Bel Air",
-	year: 1957,
-	color: "red",
-	passengers: 2,
+function prequal(car) {
+	if (car.mileage > 10000) {
+		return false;
+	} else if (car.year > 1960) {
+		return false;
+	}
+	return true;
+}
+
+var taxi = {
+	make: "Webville Motors",
+	model: "Taxi",
+	year: 1955,
+	color: "yellow",
+	passengers: 4,
 	convertible: false,
-	mileage: 1021
+	mileage: 40077
 };
 
-var cadi = {
-	make: "Cadillac",
-	model: "GM",
-	year: 1955,
-	color: "tan",
-	passengers: 5,
-	convertible: false,
-	mileage: 12892,
-	mileage: 14000,
-	"test param": 100
-};
-console.log(cadi);
+var worthALook = prequal(taxi);
+if (worthALook) {
+	console.log("you gotta check out this " + taxi.make + " " + taxi.model);
+} else {
+	console.log("you should reaally pass on the " + taxi.make + " " + taxi.model);
+}
