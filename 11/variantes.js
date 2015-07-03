@@ -16,7 +16,7 @@ function makeCounter() {
 	var count = 0;
 	return objtest = {
 		increment: function() {
-			return count + 1;
+			return (count + 1);
 		}
 	};
 }
